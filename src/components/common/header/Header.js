@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
+
+    // state to hide the header when the user scrolls down
+    const [ isShowHeader, setShowHeader ] = useState(true) // initially hide the header
+
+    // state to keep track of the headers position
+    const [ lastScrollY, setLastScrollY ] = useState(0) // initially at the top
+
+    // scrolled state to know if the user has scrolled
+    const [ scrolled, setScrolled ] = useState(false) // initially set to false
   
     //  an array of header links
     const headerLinks = [
@@ -16,9 +25,45 @@ export default function Header() {
 
     // function to know the current page displayed
     const location = useLocation()
+
+    // useEffect to hide the header when the user scrolls down
+    useEffect(() => {
+
+        // function to change hide the header when the user scrolls down
+        const handleScroll = () => {
+            // current scrolling position
+            const currentScrollY = window.scrollY
+
+            // if the current scrolling position is greater than the last scroll
+            if (currentScrollY > lastScrollY) {
+                // hide the header
+                setShowHeader(false)
+            } else {
+                // show the header
+                setShowHeader(true)
+            }
+
+            // add the background after scrolling 50px
+            if (currentScrollY > 50) setScrolled(true)
+                else setScrolled(false)
+
+            // update the scroll the lastscroll position with the last scroll position
+            setLastScrollY(currentScrollY)
+
+        }
+
+        // listen for the scroll event
+        window.addEventListener('scroll', handleScroll)
+        
+        // remove the event listener on mount
+        return () => window.removeEventListener('scroll', handleScroll)
+
+    }, [lastScrollY]) // watch the scroll position
   
     return (
-        <header>
+        <header
+            className={`${isShowHeader ? "show" : "hide"} ${scrolled ? "scrolled" : ""}`}
+        >
             <div className='header-logo'>
                 <img 
                     src={require('../../../images/logo.png')}

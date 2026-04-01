@@ -6,8 +6,22 @@ header {
     z-index: 9999;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 50px;
     box-sizing: border-box;
+}
+
+header.show {
+    transform: translateY(0%);
+    transition: all 0.5 ease;
+}
+
+header.hide {
+    transform: translateY(-100%);
+    transition: all 0.5 ease;
+}
+
+header.scrolled {
+    background-color: rgb(255, 255, 255);
 }
 
 header .header-links a {
@@ -15,11 +29,20 @@ header .header-links a {
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+}
+
+header .header-links a:hover {
+    transform: translateY(-5px);
+}
+header .header-links a.active {
+    color: rgba(255, 200, 0, 0.6)
 }
 
 header .header-links {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
