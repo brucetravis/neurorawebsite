@@ -3,7 +3,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     padding: 5px 50px;
@@ -12,16 +12,17 @@ header {
 
 header.show {
     transform: translateY(0%);
-    transition: all 0.5 ease;
+    transition: all 0.5s ease;
 }
 
 header.hide {
     transform: translateY(-100%);
-    transition: all 0.5 ease;
+    transition: all 0.5s ease;
 }
 
 header.scrolled {
     background-color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
 }
 
 header .header-links a {
@@ -50,4 +51,68 @@ header .header-links {
     align-items: center;
     gap: 30px;
 }
+
+
+header .mobile-nav,
+header .open-mobile-icon {
+    display: none
+}
+
+header .mobile-nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: #fff;
+    overscroll-behavior: contain;
+    overflow-x: hidden;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    padding: 100px 0;
+}
+
+header .mobile-nav .mobile-header-links {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+}
+
+header .mobile-nav .mobile-header-links a {
+    text-decoration: none;
+    padding: 20px;
+    margin: 0;
+    color: #333;
+    border-bottom: 2px solid rgb(51, 51, 51, 0.3);
+    display: inline-block;
+}
+
+header .mobile-nav .close-mobile-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2001
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        align-items: center;
+        padding: 5px 20px;
+    }
+
+    header .header-links {
+        display: none
+    }
+
+    header .open-mobile-icon {
+        display: block
+    }
+    
+    header .mobile-nav {
+        display: block
+    }
+}
+
+
 

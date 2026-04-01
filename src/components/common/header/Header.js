@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
 import { Link, useLocation } from 'react-router-dom'
+import { MenuIcon, X } from 'lucide-react'
 
 export default function Header() {
 
@@ -12,6 +13,9 @@ export default function Header() {
 
     // scrolled state to know if the user has scrolled
     const [ scrolled, setScrolled ] = useState(false) // initially set to false
+    
+    //  state to open and close the header
+    const [ isOpen, setIsOpen ] = useState(false) // initially, the mobile header is closed
   
     //  an array of header links
     const headerLinks = [
@@ -70,6 +74,15 @@ export default function Header() {
                     alt='Neurora Icon'
                 />
             </div>
+            
+            <MenuIcon
+                size={30}
+                stroke={
+                    scrolled ? "#333" : "#fff" 
+                }
+                onClick={() => setIsOpen(true)} // open the mobile header
+                className="open-mobile-icon"
+            />
 
             <div className='header-links'>
                 {headerLinks.map((l) => (
@@ -82,6 +95,29 @@ export default function Header() {
                     </Link>
                 ))}
             </div>
+
+            {isOpen && (
+                <nav className='mobile-nav'>
+                    <X 
+                        size={30}
+                        stroke="#333"
+                        onClick={() => setIsOpen(false)} // close the mobile header
+                        className='close-mobile-icon'
+                    />
+
+                    <div className='mobile-header-links'>
+                        {headerLinks.map((l) => (
+                            <Link
+                                key={l.id}
+                                to={l.link}
+                                className={`${location.path === l.link ? "active" : ""}`}
+                            >
+                                {l.name}
+                            </Link>
+                        ))}
+                    </div>
+                </nav>
+            )}
         </header>
     )
 }
