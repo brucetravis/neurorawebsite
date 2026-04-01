@@ -1,0 +1,25 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+header .header-links a {
+    display: inline;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+header .header-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
