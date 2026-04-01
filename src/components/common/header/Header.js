@@ -20,14 +20,10 @@ export default function Header() {
     return (
         <header>
             <div className='header-logo'>
-                {/* <img 
+                <img 
                     src={require('../../../images/logo.png')}
                     alt='Neurora Icon'
-                /> */}
-
-                <h5>
-                    NEURORA
-                </h5>
+                />
             </div>
 
             <div className='header-links'>
