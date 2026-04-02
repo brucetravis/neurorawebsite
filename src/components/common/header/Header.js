@@ -70,7 +70,7 @@ export default function Header() {
         >
             <div className='header-logo'>
                 <img 
-                    src={require('../../../images/logo.png')}
+                    src={require('../../../assets/images/logo.png')}
                     alt='Neurora Icon'
                 />
             </div>

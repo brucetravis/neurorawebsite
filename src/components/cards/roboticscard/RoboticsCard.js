@@ -14,7 +14,7 @@ export default function RoboticsCard() {
 
   // card spring
   const topSpring = useSpring({
-    transform: inView ? 'translateY(0%)' : 'translateY(50%)',
+    transform: inView ? 'translateY(0%)' : 'translateY(20%)',
     opacity: inView ? 1 : 0,
     config: { mass: 1, tension: 80, friction: 25 }
   })
@@ -27,7 +27,7 @@ export default function RoboticsCard() {
     >
       <video autoPlay muted loop>
         <source 
-          src={require('../../../videos/robot.mp4')} type='video/mp4' 
+          src={require('../../../assets/videos/robot.mp4')} type='video/mp4' 
         />
       </video>
 

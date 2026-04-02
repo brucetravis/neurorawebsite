@@ -4,6 +4,7 @@ import Hero from '../../components/sections/hero/Hero'
 import About from '../../components/sections/about/About'
 import Services from '../../components/sections/services/Services'
 import { useLocation } from 'react-router-dom'
+import Team from '../../components/sections/team/Team'
 
 export default function Landing() {
 
@@ -23,6 +24,7 @@ export default function Landing() {
       <Hero />
       <About />
       <Services />
+      <Team />
     </main>
   )
 }
