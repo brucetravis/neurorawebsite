@@ -1,8 +1,4 @@
-.landing-page {
-    overflow-x: hidden;
-}
-
-@media screen and (max-width) {
+@media screen and (max-width: 768px) {
     .landing-page {
         overflow-x: hidden;
     }
