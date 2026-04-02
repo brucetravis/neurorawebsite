@@ -14,7 +14,7 @@ export default function RoboticsCard() {
 
   // card spring
   const topSpring = useSpring({
-    transform: inView ? 'translateY(0%)' : 'translateY(20%)',
+    transform: inView ? 'translateY(0%)' : 'translateY(5%)',
     opacity: inView ? 1 : 0,
     config: { mass: 1, tension: 80, friction: 25 }
   })
@@ -32,7 +32,7 @@ export default function RoboticsCard() {
       </video>
 
       <h6>
-        Robotics Systems Build for Precidion and Automation
+        Robotics Systems Build for Precicion and Automation
       </h6>
     </animated.div>
   )

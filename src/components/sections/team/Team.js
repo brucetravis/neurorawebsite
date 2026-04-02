@@ -35,7 +35,7 @@ export default function Team() {
 
     // up spring
     const upSpring = useSpring({
-        transform: inView ? 'translateY(0%)' : 'translateY(-50%)',
+        transform: inView ? 'translateY(0%)' : 'translateY(-20%)',
         opacity: inView ? 1 : 0,
         config: { mass: 1, tension: 80, friction: 25 },
         delay: 200
@@ -43,7 +43,7 @@ export default function Team() {
 
     // downspring
     const downSpring = useSpring({
-        transform: inView ? 'translateY(0%)' : 'translateY(50%)',
+        transform: inView ? 'translateY(0%)' : 'translateY(20%)',
         opacity: inView ? 1 : 0,
         config: { mass: 1, tension: 80, friction: 25 },
         delay: 200
