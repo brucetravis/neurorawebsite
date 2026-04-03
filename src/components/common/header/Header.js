@@ -20,11 +20,10 @@ export default function Header() {
     //  an array of header links
     const headerLinks = [
         { id: 1, name: "Home", link: "/" },
-        { id: 2, name: "About", link: "/about" },
-        { id: 3, name: "Software&AI", link: "/software" },
-        { id: 4, name: "AI Platform", link: "/platform" },
-        { id: 5, name: "Robotics", link: "/robotics" },
-        { id: 6, name: "Contact Us", link: "/contact" }
+        { id: 2, name: "Software&AI", link: "/software" },
+        { id: 3, name: "AI Platform", link: "/platform" },
+        { id: 4, name: "Robotics", link: "/robotics" },
+        { id: 5, name: "Contact Us", link: "/contact" }
     ]
 
     // function to know the current page displayed
