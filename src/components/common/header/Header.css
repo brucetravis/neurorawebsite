@@ -39,8 +39,10 @@ header .header-links a {
 header .header-links a:hover {
     transform: translateY(-5px);
 }
+
 header .header-links a.active {
-    color: rgba(255, 200, 0, 0.6)
+    color: rgba(255, 238, 0, 0.8);
+    font-weight: 700
 }
 
 header.scrolled .header-links a {

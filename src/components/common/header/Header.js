@@ -88,7 +88,7 @@ export default function Header() {
                     <Link
                         key={l.id}
                         to={l.link}
-                        className={`${location.path === l.link ? "active" : ""}`}
+                        className={`${location.pathname === l.link ? "active" : ""}`}
                     >
                         {l.name}
                     </Link>
@@ -109,7 +109,8 @@ export default function Header() {
                             <Link
                                 key={l.id}
                                 to={l.link}
-                                className={`${location.path === l.link ? "active" : ""}`}
+                                className={`${location.pathname === l.link ? "active" : ""}`}
+                                onClick={() => setIsOpen(false)}
                             >
                                 {l.name}
                             </Link>
