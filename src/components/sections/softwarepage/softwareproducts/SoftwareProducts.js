@@ -151,6 +151,14 @@ export default function SoftwareProducts() {
           </animated.a>
         </div>
       </div>
+
+      <a
+        href='https://calendly.com/neurora4/30min'
+        rel='noopener noreferrer'
+        className='contact-button'
+      >
+        Request a Quote
+      </a>
     </section>
   )
 }
