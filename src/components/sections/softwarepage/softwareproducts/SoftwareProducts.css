@@ -1,6 +1,6 @@
 .software-products-section {
     /* background:#cfbbbb; */
-    background: rgb(207, 187, 187, 0.8);
+    background: linear-gradient(to bottom, rgba(207, 187, 187, 0.5), rgba(207, 187, 187, 0.8));
     height:100vh;
     padding: 100px 50px 100px 50px;
     display: flex;
