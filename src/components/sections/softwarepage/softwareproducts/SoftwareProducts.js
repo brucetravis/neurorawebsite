@@ -39,6 +39,7 @@ export default function SoftwareProducts() {
   const defaultLink = (e) => {
     e.preventDefault() // prevent navigation
     alert('Project will be displayed soon')
+  }
 
 
   return (
