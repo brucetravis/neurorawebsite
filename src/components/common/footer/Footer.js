@@ -1,8 +1,13 @@
 import React from 'react'
 import './Footer.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Footer() {
+
+    const defaultFunction = (e) => {
+        e.preventDefault()
+        alert('The legal document will be availabe for veiwing soon')
+    }
   
     // footer links
     const footerLinks = [
@@ -10,34 +15,34 @@ export default function Footer() {
             id: 1,
             title: "Company",
             content: [
-                "Home",
-                "About",
-                "Software & AI",
-                "Robotics",
-                "Contact Us"
+                { id: 1, name: "Company", link: "/" },
+                { id: 2, name: "AI Platform", link: "platform" },
+                { id: 3, name: "Software & AI", link: "software" },
+                { id: 4, name: "Robotics", link: "robotics" },
             ]
         },
 
         { 
             id: 2,
             title: "Contact",
+
             content: [
-                "Email Now",
-                "X",
-                "LinkedIn",
-                "Facebook",
-                "Instagram",
-                "YouTube"
+                { id: 1, name: "Email Now", link: "neurora4@gmail.com" },
+                { id: 2, name: "X", link: "platform" },
+                { id: 3, name: "LinkedIn", link: "software" },
+                { id: 4, name: "Instagram", link: "robotics" }
             ]
         },
 
         { 
             id: 3,
             title: "Legal",
+
             content: [
-                "Software and Robotics Policy",
-                "Privacy Policy",
-                "Terms of Use",
+                { id: 1, name: "Software and Robotics Policy", link: defaultFunction },
+                { id: 2, name: "Privacy Policy", link: defaultFunction },
+                { id: 3, name: "Terms of Use", link: defaultFunction },
+                { id: 4, name: "Instagram", link: defaultFunction }
             ]
         }
     ]
@@ -56,14 +61,15 @@ export default function Footer() {
                     <h6>{section.title}</h6>
 
                     <div className='links-content'>
-                        {section.content.map((item, idx) => (
+                        {section.content.map((item) => (
                             <a
-                                key={idx}
-                                href={item}
-                                rel="noopener noreferrer"
-                                target="_blank"
+                                key={item.id}
+                                href={typeof item.link === 'string' ? item.link : '#!'} // string = normal link, function = dummy
+                                onClick={typeof item.link === 'function' ? item.link : undefined} // only call function if link is a function
+                                rel={typeof item.link === 'string' && item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                target={typeof item.link === 'string' && item.link.startsWith('http') ? '_blank' : undefined}
                             >
-                                {item}
+                                {item.name}
                             </a>
                         ))}
                     </div>
