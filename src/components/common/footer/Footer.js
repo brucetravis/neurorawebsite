@@ -38,7 +38,6 @@ export default function Footer() {
                 "Software and Robotics Policy",
                 "Privacy Policy",
                 "Terms of Use",
-                "Change Cookie Settings"
             ]
         }
     ]
@@ -73,7 +72,7 @@ export default function Footer() {
 
             <div className='footer-button'>
                 <button
-                    onClick={() => navigate('/about')}
+                    onClick={() => navigate('/')}
                 >
                     Learn More
                 </button>
