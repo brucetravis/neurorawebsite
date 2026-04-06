@@ -35,6 +35,12 @@ export default function SoftwareProducts() {
     config: { mass: 1, tension: 80, friction: 25 }
   })
 
+  // default function
+  const defaultFunction = (e) => {
+    e.preventDefault()
+    alert('Project will be displayed soon.')
+  }
+
   return (
     <section className='software-products-section' ref={ref}>
 
@@ -50,7 +56,8 @@ export default function SoftwareProducts() {
         {/* Top Row */}
         <div className="hex-row">
           <animated.a
-            href='/'
+            href='#!'
+            onClick={defaultFunction}
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -69,7 +76,8 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
-            href='/'
+            href='#!'
+            onClick={defaultFunction}
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -88,7 +96,8 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
-            href='/'
+            href='#!'
+            onClick={defaultFunction}
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -110,7 +119,8 @@ export default function SoftwareProducts() {
         {/* Bottom Row */}
         <div className="hex-row offset">
           <animated.a
-            href='/'
+            href='#!'
+            onClick={defaultFunction}
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -132,7 +142,8 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
-            href='/'
+            href='#!'
+            onClick={defaultFunction}
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"

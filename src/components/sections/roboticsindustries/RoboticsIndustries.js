@@ -36,6 +36,12 @@ export default function RoboticsIndustries() {
         config: { mass: 1, tension: 80, friction: 25 }
     })
 
+    // default function
+    const defaultFunction = (e) => {
+        e.preventDefault()
+        alert('Project will be displayed soon.')
+    }
+
   return (
     <section className='robotics-industries-section' ref={ref}>
 
@@ -51,7 +57,8 @@ export default function RoboticsIndustries() {
             {/* Top Row */}
             <div className="hex-row">
                 <animated.a
-                    href='/'
+                    href='#!'
+                    onClick={defaultFunction}
                     rel='noreferrer noopener'
                     target='_blank'
                     className="hexagon"
@@ -70,8 +77,8 @@ export default function RoboticsIndustries() {
                 </animated.a>
 
                 <animated.a
-                    href='/'
-                    rel='noreferrer noopener'
+                    href='#!'
+                    onClick={defaultFunction}
                     target='_blank'
                     className="hexagon"
                     style={{
@@ -91,7 +98,8 @@ export default function RoboticsIndustries() {
                 </animated.a>
 
                 <animated.a
-                    href='/'
+                    href='#!'
+                    onClick={defaultFunction}
                     rel='noreferrer noopener'
                     target='_blank'
                     className="hexagon"
@@ -115,7 +123,8 @@ export default function RoboticsIndustries() {
         {/* Bottom Row */}
         <div className="hex-row offset">
           <animated.a
-            href='/'
+            href='#!'
+            onClick={defaultFunction}
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -137,7 +146,8 @@ export default function RoboticsIndustries() {
             </animated.a>
 
             <animated.a
-                href='/'
+                href='#!'
+                onClick={defaultFunction}
                 rel='noreferrer noopener'
                 target='_blank'
                 className="hexagon"
