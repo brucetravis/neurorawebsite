@@ -1,0 +1,51 @@
+.ai-adoption-card {
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-adoption-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+
+.ai-adoption-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit:  cover;
+}
+
+
+.ai-adoption-card h6 {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    max-width: 500px;
+    z-index: 3;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 200;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    transition: all 0.5s ease
+}
+
+.ai-adoption-card h6:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transform: translateY(-10px);
+    text-underline-offset: 10px;
+    text-decoration-thickness: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .ai-adoption-card h6 {
+        left: 20px;
+        font-size: 1rem;
+    }
+}

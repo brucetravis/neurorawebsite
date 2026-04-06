@@ -1,0 +1,27 @@
+.services-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 100px 50px 100px 50px;
+    height: 60vh;
+}
+
+.services-section .software-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .services-section {
+        grid-template-columns: 1fr;
+        padding: 100px 20px 100px 20px;
+        height: auto;
+    }
+
+    .services-section .software-services {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
