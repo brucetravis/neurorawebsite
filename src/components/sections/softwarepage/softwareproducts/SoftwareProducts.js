@@ -39,7 +39,7 @@ export default function SoftwareProducts() {
   const defaultLink = (e) => {
     e.preventDefault() // prevent navigation
     alert('Project will be displayed soon')
-  }
+
 
   return (
     <section className='software-products-section' ref={ref}>
@@ -58,6 +58,7 @@ export default function SoftwareProducts() {
           <animated.a
             href="#!"
             onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -76,6 +77,7 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
+
             href="#!"
             onClick={defaultLink}
             rel='noreferrer noopener'
@@ -96,8 +98,10 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
+
             href="#!"
             onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -121,6 +125,7 @@ export default function SoftwareProducts() {
           <animated.a
             href="#!"
             onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -142,8 +147,10 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
+
             href="#!"
             onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"

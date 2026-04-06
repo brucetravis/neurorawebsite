@@ -62,7 +62,8 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll)
 
     }, [lastScrollY]) // watch the scroll position
-  
+
+
     return (
         <header
             className={`${isShowHeader ? "show" : "hide"} ${scrolled ? "scrolled" : ""}`}
