@@ -35,11 +35,11 @@ export default function SoftwareProducts() {
     config: { mass: 1, tension: 80, friction: 25 }
   })
 
-  // default function
-  const defaultFunction = (e) => {
-    e.preventDefault()
-    alert('Project will be displayed soon.')
-  }
+  // default alert function for the links
+  const defaultLink = (e) => {
+    e.preventDefault() // prevent navigation
+    alert('Project will be displayed soon')
+
 
   return (
     <section className='software-products-section' ref={ref}>
@@ -56,8 +56,9 @@ export default function SoftwareProducts() {
         {/* Top Row */}
         <div className="hex-row">
           <animated.a
-            href='#!'
-            onClick={defaultFunction}
+            href="#!"
+            onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -76,8 +77,9 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
-            href='#!'
-            onClick={defaultFunction}
+
+            href="#!"
+            onClick={defaultLink}
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -96,8 +98,10 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
-            href='#!'
-            onClick={defaultFunction}
+
+            href="#!"
+            onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -119,8 +123,9 @@ export default function SoftwareProducts() {
         {/* Bottom Row */}
         <div className="hex-row offset">
           <animated.a
-            href='#!'
-            onClick={defaultFunction}
+            href="#!"
+            onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -142,8 +147,10 @@ export default function SoftwareProducts() {
           </animated.a>
 
           <animated.a
-            href='#!'
-            onClick={defaultFunction}
+
+            href="#!"
+            onClick={defaultLink}
+
             rel='noreferrer noopener'
             target='_blank'
             className="hexagon"
@@ -162,6 +169,14 @@ export default function SoftwareProducts() {
           </animated.a>
         </div>
       </div>
+
+      <a
+        href='https://calendly.com/neurora4/30min'
+        rel='noopener noreferrer'
+        className='contact-button'
+      >
+        Request a Quote
+      </a>
     </section>
   )
 }

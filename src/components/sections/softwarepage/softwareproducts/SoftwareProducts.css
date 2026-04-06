@@ -1,7 +1,12 @@
 .software-products-section {
-    background:#cfbbbb;
+    /* background:#cfbbbb; */
+    background: linear-gradient(to bottom, rgba(207, 187, 187, 0.5), rgba(207, 187, 187, 0.8));
     height:100vh;
-    padding: 100px 50px 50px 50px;
+    padding: 100px 50px 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .software-products-section h4 {
@@ -20,17 +25,17 @@
     align-items:center;
 }
 
-.hex-row{
+.software-products-section .hex-row{
     display:flex;
     gap:40px;
 }
 
-.offset{
+.software-products-section .offset{
     margin-top:-30px;      /* pulls row upward */
     margin-left: 0px;     /* centers between top hexagons */
 }
 
-.hexagon {
+.software-products-section .hexagon {
     width:350px;
     height:350px;
 
@@ -47,23 +52,23 @@
     transition: all 0.5s ease;
 }
 
-.hexagon:hover {
+.software-products-section .hexagon:hover {
     cursor: pointer;
 }
 
-.hexagon img{
+.software-products-section .hexagon img{
     width:100%;
     height:100%;
     object-fit:cover;
 }
 
-.hexagon video {
+.software-products-section .hexagon video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.hexagon::after {
+.software-products-section .hexagon::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -71,7 +76,7 @@
     z-index: 2;
 }
 
-.hexagon .hex-content {
+.software-products-section .hexagon .hex-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -84,8 +89,8 @@
     color: #fff
 }
 
-.hexagon .hex-content h6,
-.hexagon .hex-content h5 {
+.software-products-section .hexagon .hex-content h6,
+.software-products-section .hexagon .hex-content h5 {
     text-align: center;
     text-transform: uppercase;
     font-weight: 400;
@@ -93,9 +98,27 @@
     font-size: 16px;
 }
 
+.software-products-section .contact-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 50px;
+    border: 2px solid #fff;
+    background: none;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-top: 5vh;
+    transition: all 0.5s ease
+}
+
+.software-products-section .contact-button:hover {
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 768px) {
-    .hex-row{
+    .software-products-section .hex-row{
         flex-direction: column
     }
 
@@ -103,7 +126,7 @@
         height: auto;
     }
 
-    .offset{
+    .software-products-section .offset{
         margin-top: 10px;
         margin-left: 0px;
     }

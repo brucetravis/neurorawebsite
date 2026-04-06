@@ -3,6 +3,7 @@ import './SoftwarePage.css'
 import SoftwareHero from '../../components/sections/softwarepage/softwarehero/SoftwareHero'
 import { useLocation } from 'react-router-dom'
 import SoftwareProducts from '../../components/sections/softwarepage/softwareproducts/SoftwareProducts'
+import Pricing from '../../components/sections/softwarepage/pricing/Pricing'
 
 export default function SoftwarePage() {
 
@@ -23,6 +24,7 @@ export default function SoftwarePage() {
     <main className='software-page'>
         <SoftwareHero />
         <SoftwareProducts />
+        <Pricing />
     </main>
   )
 }
