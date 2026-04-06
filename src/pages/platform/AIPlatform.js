@@ -34,6 +34,12 @@ export default function AIPlatform() {
         delay: 200
     })
 
+    // default function
+    const defaultFunction = (e) => {
+        e.preventDefault()
+        alert('Our platform will be ready for adoption soon.')
+    }
+
   return (
     <main className='platform-page' ref={ref}>
         <img 
@@ -52,7 +58,8 @@ export default function AIPlatform() {
             </h3>
 
             <a
-                href='/platform'
+                href='#!'
+                onClick={defaultFunction}
                 target='_blank'
                 className='button'
             >
