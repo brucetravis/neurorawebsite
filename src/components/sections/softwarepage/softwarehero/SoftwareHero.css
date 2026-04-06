@@ -1,0 +1,85 @@
+.software-hero-section {
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.software-hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.software-hero-section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* adjust fade length */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
+    z-index: 3; /* above overlay but below text */
+    pointer-events: none;
+}
+
+.software-hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.software-hero-section .software-hero-content {
+    /* background: red; */
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.software-hero-section h2 {
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 200;
+    text-align: left;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.software-hero-section h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-weight: 200;
+    text-align: left;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+
+    .software-hero-section {
+        overflow-x: hidden;
+    }
+
+    .software-hero-section .software-hero-content {
+        padding: 0 1rem 0 -2rem
+    }
+
+    .software-hero-section h2 {
+        font-size: 0.5rem;
+        text-align: center;
+    }
+
+    .software-hero-section h1 {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}

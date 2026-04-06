@@ -17,7 +17,7 @@ export default function Landing() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [
     location.pathname
-  ]) // empty dependency array
+  ])
 
   return (
     <main className='landing-page'>
